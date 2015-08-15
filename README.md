@@ -122,4 +122,4 @@ Tarmo Leppänen
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Tarmo Leppänen
+Copyright (c) 2015 Tarmo Leppänen
