@@ -13,7 +13,9 @@ this demo application contains following features:
 
 ## Demo
 
-Demo of this application can be found from [https://boiling-fire-2804.firebaseapp.com/](https://boiling-fire-2804.firebaseapp.com/) 
+Demo of this application can be found from [https://boiling-fire-2804.firebaseapp.com/](https://boiling-fire-2804.firebaseapp.com/)
+ 
+![QR code to demo application](https://raw.github.com/tarlepp/Angular-Firebase-Material-Demo/master/qr.png)
 
 ## Used libraries, guides, etc.
 
