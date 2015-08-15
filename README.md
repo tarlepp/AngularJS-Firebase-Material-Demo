@@ -8,7 +8,7 @@ Just a small demo to show how to use [Angular](https://angularjs.org/) + [Fireba
 
 ## Demo
 
-Todo
+Demo of this application can be found from [https://boiling-fire-2804.firebaseapp.com/](https://boiling-fire-2804.firebaseapp.com/) 
 
 ## Used libraries, guides, etc.
 
