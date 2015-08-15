@@ -4,7 +4,12 @@ Angular/Firebase/Material - demo
 ## What is this?
 
 Just a small demo to show how to use [Angular](https://angularjs.org/) + [Firebase](https://www.firebase.com/) + 
-[Google Material Design](https://www.google.com/design/spec/material-design/introduction.html) together.
+[Google Material Design](https://www.google.com/design/spec/material-design/introduction.html) together. Currently
+this demo application contains following features:
+
+ * Social media login (Facebook, Twitter, Google+ and GitHub)
+ * Personal 'Todo' item list
+ * Chat with other users
 
 ## Demo
 
