@@ -1,0 +1,70 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <span>Angular/Firebase/Material - demo</span>
+
+        <md-button aria-label="About"
+            data-ui-sref="about"
+        >
+            <i class="md-headline mdi mdi-information-outline"></i>
+
+            about
+        </md-button>
+
+        <md-button aria-label="Todo"
+           data-ng-disabled="!vm.user"
+           data-ui-sref="todo"
+        >
+            <i class="md-headline mdi mdi-checkbox-marked-outline"></i>
+
+            todo
+        </md-button>
+
+        <md-button aria-label="Chat"
+            data-ng-disabled="!vm.user"
+            data-ui-sref="chat"
+        >
+            <i class="md-headline mdi mdi-message-text-outline"></i>
+
+            chat
+        </md-button>
+
+        <!-- fill up the space between left and right area -->
+
+        <span flex></span>
+
+        <md-button
+            data-ng-show="!vm.user"
+            data-ui-sref="auth.login"
+        >
+            <i class="mdi mdi-login"></i>
+
+            Login
+        </md-button>
+
+        <md-list-item class="md-3-line"
+            data-ng-show="vm.user"
+        >
+            <img class="md-avatar" alt="{{vm.user[vm.user.provider].displayName}}"
+                data-ng-src="{{vm.user[vm.user.provider].profileImageURL}}"
+            />
+
+            <div class="md-list-item-text">
+                <h3>
+                    <i class="mdi" data-ng-class="vm.getProviderClass(vm.user.provider)"></i>
+
+                    <span data-ng-bind="vm.user[vm.user.provider].displayName"></span>
+                </h3>
+
+                <p data-ng-bind="vm.user[vm.user.provider].email"></p>
+            </div>
+
+            <div class="md-list-item-text">
+                <md-button data-ng-click="vm.logout($event)">
+                    <i class="mdi mdi-logout"></i>
+
+                    Logout
+                </md-button>
+            </div>
+        </md-list-item>
+    </div>
+</md-toolbar>

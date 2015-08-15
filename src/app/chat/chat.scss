@@ -1,0 +1,50 @@
+.chat-container {
+  main.md-padding {
+    padding: 0;
+  }
+
+  md-input-container {
+    padding-bottom: 0;
+    padding-left: 10px;
+  }
+}
+
+.chat {
+  margin: 0;
+  padding: 0;
+
+  .messages {
+    border-top: none;
+    border-bottom: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    padding: 0 10px;
+
+    code {
+      background-color: transparent;
+    }
+
+    .time {
+      position: absolute;
+      left: 5px;
+    }
+
+    .message {
+      margin-left: 155px;
+    }
+  }
+
+  .input-group {
+    .form-control,
+    .input-group-addon {
+      &:first-child {
+        border-top-left-radius: 0;
+      }
+    }
+
+    .input-group-btn:last-child > .btn {
+      border-top-right-radius: 0;
+    }
+  }
+}

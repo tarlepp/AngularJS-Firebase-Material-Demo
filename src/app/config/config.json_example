@@ -1,0 +1,8 @@
+/**
+ * Copy this file to 'config.json' and define _your_ firebaseUrl + remember remove this comment block too :D
+ */
+{
+  "config": {
+    "firebaseUrl": "https://CHANGETHISTOMATCHYOURFIREBASEURL.firebaseio.com/"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-ng-app="firebaseDemo">
+    <head>
+        <title data-ng-bind="title"></title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1" />
+
+        <base href="/" />
+
+        <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+        <!-- inject:vendor:css -->
+        <!-- endinject -->
+
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+
+    <body class="ng-cloak"
+        data-ng-cloak
+        data-ng-class="containerClass"
+    >
+        <div layout="column" layout-fill>
+            <header id="header">
+                <div data-ui-view="header"></div>
+            </header>
+
+            <main class='md-padding' layout="row" flex>
+                <div id="layout" flex data-ui-view="content"></div>
+            </main>
+
+            <footer id="footer">
+                <div data-ui-view="footer"></div>
+            </footer>
+        </div>
+        <!-- inject:vendor:js -->
+        <!-- endinject -->
+
+        <!-- inject:js -->
+        <!-- endinject -->
+    </body>
+</html>

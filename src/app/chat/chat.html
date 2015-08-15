@@ -1,0 +1,62 @@
+<div class="chat">
+    <div class="messages"
+        data-chat-screen
+        data-chat-scroll="vm.messages"
+    >
+        <md-list>
+            <md-list-item class="md-2-line" data-ng-repeat="message in vm.messages">
+                <div class="md-list-item-text">
+                    <h3>
+                        {{message.user.name}}
+                    </h3>
+                    <p>{{message.message}}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+
+    <div class="inputs">
+        <md-list>
+            <form name="vm.form">
+                <md-list-item class="md-2-line">
+                    <md-input-container flex>
+                        <label for="message">Enter a chat message</label>
+                        <input id="message" name="message" type="text"
+                            data-ng-required="true"
+                            data-ng-model="vm.message"
+                        />
+                    </md-input-container>
+
+                    <md-button class="md-icon-button md-primary" aria-label="Send message"
+                        data-ng-click="vm.send()"
+                        data-ng-disabled="!vm.form.$valid"
+                    >
+                        <md-tooltip>
+                            Send messagejoi
+                        </md-tooltip>
+
+                        <md-icon md-font-set="material-icons"> send </md-icon>
+                    </md-button>
+                </md-list-item>
+            </form>
+        </md-list>
+    </div>
+</div>
+
+<!--
+<div layout="column" layout-align="end start">
+    <div layout-fill>
+        list here
+        <md-list>
+            <md-list-item class="md-2-line" ng-repeat="message in vm.messages">
+                <div class="md-list-item-text">
+                    <h3>{{message.title}}</h3>
+                    <p>{{message.description}}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+
+    <div></div>
+</div>
+-->

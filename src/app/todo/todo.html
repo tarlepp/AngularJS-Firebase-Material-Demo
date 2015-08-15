@@ -1,0 +1,49 @@
+
+<md-list>
+    <form name="vm.form">
+        <md-list-item class="md-2-line">
+            <md-input-container flex>
+                <label for="label">Add new todo item</label>
+                <input id="label" name="label" type="text"
+                    data-ng-required="true"
+                    data-ng-model="vm.label"
+                />
+            </md-input-container>
+
+            <md-button class="md-icon-button md-primary" aria-label="Add new item"
+                data-ng-click="vm.add()"
+                data-ng-disabled="!vm.form.$valid"
+            >
+                <md-tooltip>
+                    Add new item
+                </md-tooltip>
+
+                <md-icon md-font-set="material-icons"> send </md-icon>
+            </md-button>
+        </md-list-item>
+    </form>
+
+    <md-list-item class="md-2-line"
+        data-ng-repeat="todo in vm.todos track by $index"
+        data-ng-class="{'todo-done': todo.isDone}"
+    >
+        <md-checkbox aria-label="Set done"
+            data-ng-model="todo.isDone"
+            data-ng-change="vm.save(todo)"
+        ></md-checkbox>
+
+        <div class="md-list-item-text">
+            <h3>{{todo.label}}</h3>
+        </div>
+
+        <md-button class="md-fab md-mini md-warn" aria-label="Remove"
+            data-ng-click="vm.remove($event, todo)"
+        >
+            <md-tooltip>
+                Remove item
+            </md-tooltip>
+
+            <md-icon md-font-set="material-icons"> clear </md-icon>
+        </md-button>
+    </md-list-item>
+</md-list>

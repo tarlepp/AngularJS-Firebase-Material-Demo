@@ -1,0 +1,7 @@
+src/app/config/config.js
+src/app/config/config.json
+node_modules/
+bower_components/
+dist/
+.tmp/
+.idea
