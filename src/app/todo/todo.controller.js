@@ -1,23 +1,24 @@
 (function() {
   'use strict';
 
-  // Specify controller for module
+  /**
+   * Specify controller for module
+   *
+   * @namespace Controllers
+   */
   angular
     .module('firebaseDemo.todo')
     .controller('TodoController', TodoController)
   ;
 
-  // Controller dependencies
-  TodoController.$inject = [
-    'logger',
-    '_todos'
-  ];
-
   /**
-   * Controller implementation.
+   * @desc      Controller implementation.
+   * @namespace Todo
+   * @memberOf  Controllers
+   * @ngInject
    *
-   * @param {logger}        logger
-   * @param {FirebaseArray} _todos
+   * @param {Factories.Logger}  logger
+   * @param {FirebaseArray}     _todos
    * @constructor
    */
   function TodoController(

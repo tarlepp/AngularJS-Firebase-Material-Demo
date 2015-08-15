@@ -7,21 +7,26 @@
     .run(appRun)
   ;
 
-  // Run block dependencies
-  appRun.$inject = ['routerHelper'];
-
   /**
-   * Actual run block.
-   *
-   * @param {routerHelper}  routerHelper
-   * @constructor
+   * @desc      Actual run block.
+   * @namespace Todo
+   * @memberOf  Routes
    * @ngInject
+   *
+   * @param {Providers.RouterHelper}  routerHelper
+   * @constructor
    */
   function appRun(routerHelper) {
     routerHelper.configureStates(getStates());
   }
 
-  // Getter method for module route definitions
+  /**
+   * @name      getStates
+   * @desc      Getter method for module route definitions.
+   * @memberOf  Routes.Todo
+   *
+   * @returns {*[]}
+   */
   function getStates() {
     return [
       {
@@ -52,9 +57,9 @@
   /**
    * '_todo' resolve function.
    *
-   * @param   {AngularFireArray}  $firebaseArray
-   * @param   {AngularFireAuth}   Auth
-   * @param   {dataservice}       dataservice
+   * @param   {AngularFireArrayService} $firebaseArray
+   * @param   {AngularFireAuth}         Auth
+   * @param   {Factories.Dataservice}   dataservice
    * @returns {ng.IPromise<TResult>}
    * @private
    * @ngInject
