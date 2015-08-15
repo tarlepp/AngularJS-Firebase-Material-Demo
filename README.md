@@ -19,11 +19,48 @@ Demo of this application can be found from [https://boiling-fire-2804.firebaseap
 
 ## Used libraries, guides, etc.
 
-Todo
+### Libraries
+
+ * [AngularJS — Superheroic JavaScript MVW Framework](https://angularjs.org/)
+ * [Angular Material](https://material.angularjs.org/)
+ * [AngularFire](https://www.firebase.com/docs/web/libraries/angular/)
+ * [Material Design icons By Google](https://github.com/google/material-design-icons)
+ * [Moment.js](http://momentjs.com/)
+
+### Guides
+
+ * [Angular Style Guide](https://github.com/johnpapa/angular-styleguide)
+ * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
+
+### Other resources
+
+ * [Firebase](https://www.firebase.com/)
+ * [Material design](https://www.google.com/design/spec/material-design/)
 
 ## Installation
 
-Todo 
+First of all you have to install <code>npm</code> and <code>node.js</code> to your box. Installation instructions can
+be found [here](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+
+After that you need to install <code>bower</code> and <code>gulp</code> main packages to make all  things to happen. 
+These can be installed with following commands on your *nix box.
+<pre>
+sudo npm install bower -g
+sudo npm install gulp -g
+</pre>
+
+And when you have <code>npm</code> and <code>node.js</code> installed to your box, just navigate yourself to root folder
+of the app and run following commands:
+
+<pre>
+npm install
+bower install
+</pre>
+
+### Configuration
+
+See ```/src/app/config/config.json_example``` file and copy it to ```/src/app/config/config.json``` file and make
+necessary changes to it. Note that you need a Firebase account to get that url.
 
 ## Development
 
@@ -33,9 +70,10 @@ To start developing in the project run:
 gulp serve
 ```
 
-Then head to `http://localhost:3000` in your browser.
+Then head to `http://localhost:3002` in your browser.
 
-The `serve` tasks starts a static file server, which serves the AngularJS application, and a watch task which watches all files for changes and lints, builds and injects them into the index.html accordingly.
+The `serve` tasks starts a static file server, which serves the AngularJS application, and a watch task which watches 
+all files for changes and lints, builds and injects them into the index.html accordingly.
 
 ## Tests
 
@@ -65,8 +103,16 @@ To make the app ready for deploy to production run:
 gulp dist
 ```
 
-Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
+Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries 
+installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
 
+### Running production ready build
+
+To start production ready build in the project run:
+
+```bash
+gulp production
+```
 
 ## Author
 
