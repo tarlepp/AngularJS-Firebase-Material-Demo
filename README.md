@@ -1,5 +1,22 @@
-firebase-demo
+Angular/Firebase/Material - demo
 ============
+
+## What is this?
+
+Just a small demo to show how to use [Angular](https://angularjs.org/) + [Firebase](https://www.firebase.com/) + 
+[Google Material Design](https://www.google.com/design/spec/material-design/introduction.html) together.
+
+## Demo
+
+Todo
+
+## Used libraries, guides, etc.
+
+Todo
+
+## Installation
+
+Todo 
 
 ## Development
 
@@ -42,3 +59,14 @@ gulp dist
 ```
 
 Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
+
+
+## Author
+
+Tarmo Leppänen
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Tarmo Leppänen
