@@ -40,7 +40,7 @@
         stamp: new Date().getTime(),
         user: {
           name: _user[_user.provider].displayName,
-          email: _user[_user.provider].email,
+          email: _user[_user.provider].email || '',
           image: _user[_user.provider].profileImageURL
         }
       };
