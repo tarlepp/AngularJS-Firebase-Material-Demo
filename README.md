@@ -62,6 +62,37 @@ bower install
 See ```/src/app/config/config.json_example``` file and copy it to ```/src/app/config/config.json``` file and make
 necessary changes to it. Note that you need a Firebase account to get that url.
 
+### Firebase
+
+To get Firebase running as it should first you need to make new Firebase application. Which you can create easily from
+their website [https://www.firebase.com/](https://www.firebase.com/).
+
+After you have created new application you need to make some [security rules](https://www.firebase.com/docs/security/quickstart.html) 
+for the used data storage. Below is configuration that my demo application uses, so you can use the same within your 
+application.
+
+```json
+{
+    "rules": {
+      "messages": {
+          ".write": "auth !== null",
+          ".read": "auth !== null"
+      },
+      "todos": {
+        "$uid": {
+          // grants write access to the owner of this user account whose uid must exactly match the key ($uid)
+          ".write": "auth !== null && auth.uid === $uid",
+          // grants read access to any user who is logged in with Facebook
+          ".read": "auth !== null && auth.uid === $uid"
+        }
+      }
+    }
+}
+```
+
+These rules ensure that 'todo' items are show only to user who made those. Also chat messages requires that user is
+logged in to read / write those.
+
 ## Development
 
 To start developing in the project run:
