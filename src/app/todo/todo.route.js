@@ -1,7 +1,11 @@
 (function() {
   'use strict';
 
-  // Specify run block for module
+  /**
+   * Specify run block for module
+   *
+   * @namespace Routes
+   */
   angular
     .module('firebaseDemo.todo')
     .run(appRun)
@@ -14,7 +18,6 @@
    * @ngInject
    *
    * @param {Providers.RouterHelper}  routerHelper
-   * @constructor
    */
   function appRun(routerHelper) {
     routerHelper.configureStates(getStates());
@@ -51,18 +54,17 @@
     ];
   }
 
-  // '_todo' resolve dependencies
-  _todos.$inject = ['$firebaseArray', 'Auth', 'dataservice'];
-
   /**
-   * '_todo' resolve function.
+   * @name      _todos
+   * @desc      '_todos' resolve implementation.
+   * @memberOf  Routes.Todo
+   * @ngInject
    *
    * @param   {AngularFireArrayService} $firebaseArray
    * @param   {AngularFireAuth}         Auth
    * @param   {Factories.Dataservice}   dataservice
    * @returns {ng.IPromise<TResult>}
    * @private
-   * @ngInject
    */
   function _todos($firebaseArray, Auth, dataservice) {
     return Auth
