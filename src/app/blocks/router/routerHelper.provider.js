@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Specify provider and configure it for module
+   * Specify provider blocks.router module
    *
    * @namespace Providers
    */
@@ -48,17 +48,17 @@
      * @ngInject
      *
      * @param   {$location}                             $location
-     * @param   {ng.IRootScopeService|{title: String}}  $rootScope
+     * @param   {ng.IRootScopeService|{title: string}}  $rootScope
      * @param   {ui.router.state.$state}                $state
      * @param   {Factories.Logger}                      logger
      * @returns {{
-     *  configureStates: Providers.RouterHelper.configureStates,
-     *  getStates: Providers.RouterHelper.getStates,
-     *  stateCounts: {
-     *    errors: number,
-     *    changes: number
-     *  }
-     * }}
+     *    configureStates: Providers.RouterHelper.configureStates,
+     *    getStates: Providers.RouterHelper.getStates,
+     *    stateCounts: {
+     *      errors: number,
+     *      changes: number
+     *    }
+     *  }}
      * @constructor
      */
     function routerHelper(
@@ -155,12 +155,12 @@
         /**
          * Callback for $stateChangeError event.
          *
-         * @param {Object}        event
+         * @param {object}        event
          * @param {IState}        toState
-         * @param {Object}        toParams
+         * @param {object}        toParams
          * @param {IState}        fromState
-         * @param {Object}        fromParams
-         * @param {Error|String}  error
+         * @param {object}        fromParams
+         * @param {Error|string}  error
          */
         function onEvent(event, toState, toParams, fromState, fromParams, error) {
           // Oh noes error is already activated
@@ -199,11 +199,11 @@
         /**
          * Callback for $stateChangeSuccess event.
          *
-         * @param {Object}                  event
-         * @param {IState|{title: String}}  toState
-         * @param {Object}                  toParams
+         * @param {object}                  event
+         * @param {IState|{title: string}}  toState
+         * @param {object}                  toParams
          * @param {IState}                  fromState
-         * @param {Object}                  fromParams
+         * @param {object}                  fromParams
          * @param {Error}                   error
          */
         function onEvent(event, toState, toParams, fromState, fromParams, error) {
@@ -218,7 +218,7 @@
       /**
        * Method to determine error message that is shown to user if router error happens.
        *
-       * @param   {Object}  error
+       * @param   {object}  error
        * @param   {IState}  toState
        * @returns {string}
        * @private
@@ -235,7 +235,7 @@
       /**
        * Method to get toState destination name.
        *
-       * @param   {IState|{title: String, name: String, loadedTemplateUrl: String}}  toState
+       * @param   {IState|{title: string, name: string, loadedTemplateUrl: string}}  toState
        * @returns {*|string}
        * @private
        */

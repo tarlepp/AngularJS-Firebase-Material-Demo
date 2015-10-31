@@ -35,11 +35,11 @@
     /**
      * Success state change helper function
      *
-     * @param {Object}                          event
-     * @param {IState|{containerClass: String}} toState
-     * @param {Object}                          toParams
-     * @param {IState|{containerClass: String}} fromState
-     * @param {Object}                          fromParams
+     * @param {object}                          event
+     * @param {IState|{containerClass: string}} toState
+     * @param {object}                          toParams
+     * @param {IState|{containerClass: string}} fromState
+     * @param {object}                          fromParams
      */
     function stateChangeSuccess(event, toState, toParams, fromState, fromParams) {
       $rootScope.containerClass = toState.containerClass;

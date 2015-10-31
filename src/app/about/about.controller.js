@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Specify controller for module
+   * Specify controller for firebaseDemo.about module.
    *
    * @namespace Controllers
    */
@@ -12,7 +12,7 @@
   ;
 
   /**
-   * @desc      Actual controller.
+   * @desc      Controller implementation for /about route.
    * @namespace About
    * @memberOf  Controllers
    * @ngInject

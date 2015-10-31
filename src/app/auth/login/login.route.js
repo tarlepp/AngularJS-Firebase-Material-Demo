@@ -2,30 +2,30 @@
   'use strict';
 
   /**
-   * Specify run block for module
+   * Specify run block for firebaseDemo.auth.login module.
    *
    * @namespace Routes
    */
   angular
     .module('firebaseDemo.auth.login')
-    .run(appRun)
+    .run(moduleRun)
   ;
 
   /**
-   * @desc      Actual run block.
+   * @desc      Run block for firebaseDemo.auth.login module.
    * @namespace Auth.Login
    * @memberOf  Routes
    * @ngInject
    *
    * @param {Providers.RouterHelper}  routerHelper
    */
-  function appRun(routerHelper) {
+  function moduleRun(routerHelper) {
     routerHelper.configureStates(getStates());
   }
 
   /**
    * @name      getStates
-   * @desc      Getter method for module route definitions.
+   * @desc      Getter method for firebaseDemo.auth.login module route definitions.
    * @memberOf  Routes.Auth.Login
    *
    * @returns {*[]}

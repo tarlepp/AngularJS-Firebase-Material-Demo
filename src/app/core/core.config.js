@@ -5,9 +5,9 @@
    * Specify application configure values
    *
    * @type {{
-   *  appErrorPrefix: String,
-   *  appTitle:       String
-   * }}
+   *    appErrorPrefix: string,
+   *    appTitle:       string
+   *  }}
    */
   var config = {
     appErrorPrefix: 'Angular/Firebase/Material - demo - Error',
@@ -22,7 +22,7 @@
   angular
     .module('firebaseDemo.core')
     .value('config', config)
-    .config(configure)
+    .config(moduleConfig)
   ;
 
   /**
@@ -38,7 +38,7 @@
    * @param {Providers.ExceptionHandler}      exceptionHandlerProvider
    * @constructor
    */
-  function configure(
+  function moduleConfig(
     $provide, $logProvider, $mdThemingProvider,
     routerHelperProvider, exceptionHandlerProvider
   ) {
@@ -82,8 +82,8 @@
   /**
    * $log decorator function, this is needed to add filename and line number to each $log command.
    *
-   * @param   {Function}  func
-   * @returns {Function}
+   * @param   {function}  func
+   * @returns {function}
    */
   function logDecorator(func) {
     return function anon() {

@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Specify controller for module
+   * Specify controller for firebaseDemo.auth.login module.
    *
    * @namespace Controllers
    */
@@ -12,7 +12,7 @@
   ;
 
   /**
-   * @desc      Actual controller.
+   * @desc      Controller implementation for /login route.
    * @namespace Login
    * @memberOf  Controllers
    * @ngInject
@@ -20,13 +20,12 @@
    * @param {ui.router.state.$state}  $state
    * @param {Factories.Dataservice}   dataservice
    * @param {Factories.Logger}        logger
-   * @param {Object|undefined}        _user
+   * @param {object|undefined}        _user
    * @constructor
    */
   function LoginController(
     $state,
-    dataservice,
-    logger,
+    dataservice, logger,
     _user
   ) {
     var vm = this;
@@ -39,7 +38,7 @@
     /**
      * Method to make actual login via specified provider to Firebase backend.
      *
-     * @param {String}  provider  Name of the used provider, this is one of following:
+     * @param {string}  provider  Name of the used provider, this is one of following:
      *                              - facebook
      *                              - twitter
      *                              - github
@@ -51,8 +50,8 @@
       /**
        * Login callback function which handles possible login errors and redirection if all is ok.
        *
-       * @param {Object}  error
-       * @param {Object}  authData
+       * @param {object}  error
+       * @param {object}  authData
        */
       var callback = function(error, authData) {
         if (error) {

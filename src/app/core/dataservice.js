@@ -18,7 +18,7 @@
    * @ngInject
    *
    * @param   {Firebase}  Firebase
-   * @param   {Object}    config
+   * @param   {object}    config
    * @returns {{
    *    getReference: Factories.Dataservice.getReference
    *  }}

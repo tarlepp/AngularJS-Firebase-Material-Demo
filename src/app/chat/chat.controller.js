@@ -1,26 +1,26 @@
 (function() {
   'use strict';
 
-  // Specify controller for module
+  /**
+   * Specify controller for firebaseDemo.chat module.
+   *
+   * @namespace Controllers
+   */
   angular
     .module('firebaseDemo.chat')
     .controller('ChatController', ChatController)
   ;
 
-  // Controller dependencies
-  ChatController.$inject = [
-    'logger',
-    '_user', '_messages'
-  ];
-
   /**
-   * Chat controller
+   * @desc      Controller implementation for /chat route.
+   * @namespace Chat
+   * @memberOf  Controllers
+   * @ngInject
    *
    * @param {logger}        logger
    * @param {{}}            _user
    * @param {FirebaseArray} _messages
    * @constructor
-   * @ngInject
    */
   function ChatController(
     logger,

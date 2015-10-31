@@ -1,17 +1,21 @@
 (function() {
   'use strict';
 
-  // Module initialization
+  /**
+   * Specify 'chatScreen' directive for firebaseDemo.chat module.
+   *
+   * @namespace Directives
+   */
   angular
     .module('firebaseDemo.chat')
     .directive('chatScreen', chatScreen)
   ;
 
-  // Directive dependencies
-  chatScreen.$inject = ['$window', '$timeout'];
-
   /**
-   * Actual directive code.
+   * @desc      'chatScreen' directive implementation
+   * @namespace chatScroll
+   * @memberOf  Directives
+   * @ngInject
    *
    * @param   {$window}   $window
    * @param   {$timeout}  $timeout
@@ -19,7 +23,6 @@
    *    link: function,
    *    restrict: string
    *  }}
-   * @ngInject
    */
   function chatScreen($window, $timeout) {
     return {
@@ -40,12 +43,12 @@
       var heightFooter = 0;
       var heightTotal = 0;
 
-      // Function to make actual chat screen resize
+      // function to make actual chat screen resize
       function resize() {
         $timeout(function onTimeout() {
           heightHeader = document.getElementById('header').offsetHeight;
           heightFooter = document.getElementById('footer').offsetHeight;
-          heightTotal =  $window.innerHeight - heightHeader - heightFooter - 70;
+          heightTotal = $window.innerHeight - heightHeader - heightFooter - 70;
 
           angular.element(element).css('height', heightTotal + 'px');
         });

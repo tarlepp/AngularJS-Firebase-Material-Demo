@@ -2,24 +2,24 @@
   'use strict';
 
   /**
-   * Specify run block for module
+   * Specify run block for firebaseDemo.todo module.
    *
    * @namespace Routes
    */
   angular
     .module('firebaseDemo.todo')
-    .run(appRun)
+    .run(moduleRun)
   ;
 
   /**
-   * @desc      Actual run block.
+   * @desc      Run block for firebaseDemo.todo module.
    * @namespace Todo
    * @memberOf  Routes
    * @ngInject
    *
    * @param {Providers.RouterHelper}  routerHelper
    */
-  function appRun(routerHelper) {
+  function moduleRun(routerHelper) {
     routerHelper.configureStates(getStates());
   }
 

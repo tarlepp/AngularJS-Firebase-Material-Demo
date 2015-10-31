@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Specify controller for module
+   * Specify controller for firebaseDemo.todo module.
    *
    * @namespace Controllers
    */
@@ -73,8 +73,8 @@
     /**
      * Method to remove specified todo item.
      *
-     * @param {Event}  event
-     * @param {{}}      todo
+     * @param {Event} event
+     * @param {{}}    todo
      */
     vm.remove = function(event, todo) {
       // We need to stop anything else to happen in this case...

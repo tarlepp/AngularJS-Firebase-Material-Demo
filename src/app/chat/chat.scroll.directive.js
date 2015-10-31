@@ -1,17 +1,21 @@
 (function() {
   'use strict';
 
-  // Module initialization
+  /**
+   * Specify 'chatScroll' directive for firebaseDemo.chat module.
+   *
+   * @namespace Directives
+   */
   angular
     .module('firebaseDemo.chat')
     .directive('chatScroll', chatScroll)
   ;
 
-  // Directive dependencies
-  chatScroll.$inject = ['$window', '$timeout'];
-
   /**
-   * Actual directive code.
+   * @desc      'chatScroll' directive implementation
+   * @namespace chatScroll
+   * @memberOf  Directives
+   * @ngInject
    *
    * @param   {$window}   $window
    * @param   {$timeout}  $timeout
@@ -19,7 +23,6 @@
    *    link: function,
    *    restrict: string
    *  }}
-   * @ngInject
    */
   function chatScroll($window, $timeout) {
     return {
@@ -30,9 +33,9 @@
     /**
      * Linker function for 'chatScroll' directive.
      *
-     * @param {$scope}    scope
-     * @param {$element}  element
-     * @param {object}    attributes
+     * @param {$scope}    scope       Current scope
+     * @param {$element}  element     Element object
+     * @param {object}    attributes  Element attributes
      */
     function link(scope, element, attributes) {
       // Function to make actual scroll

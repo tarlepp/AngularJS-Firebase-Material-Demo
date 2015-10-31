@@ -20,18 +20,15 @@
    * @param {$log}      $log
    * @param {$injector} $injector
    * @returns {{
-   *  showToasts: boolean,
-   *  error:      Factories.Logger.error,
-   *  info:       Factories.Logger.info,
-   *  success:    Factories.Logger.success,
-   *  warning:    Factories.Logger.warning,
-   *  log:        Factories.Logger.log
-   * }}
+   *    error:    Factories.Logger.error,
+   *    info:     Factories.Logger.info,
+   *    success:  Factories.Logger.success,
+   *    warning:  Factories.Logger.warning,
+   *    log:      Factories.Logger.log
+   *  }}
    */
   function logger($log, $injector) {
     return {
-      showToasts: true,
-
       // toastr implementations
       error: error,
       info: info,
@@ -49,9 +46,9 @@
      * @desc      Error method for logger factory.
      * @memberOf  Factories.Logger
      *
-     * @param {String}  message
-     * @param {Object}  [data]
-     * @param {String}  [title]
+     * @param {string}  message
+     * @param {object}  [data]
+     * @param {string}  [title]
      */
     function error(message, data, title) {
       data = data || {};
@@ -67,9 +64,9 @@
      * @desc      Info method for logger factory.
      * @memberOf  Factories.Logger
      *
-     * @param {String}  message
-     * @param {Object}  [data]
-     * @param {String}  [title]
+     * @param {string}  message
+     * @param {object}  [data]
+     * @param {string}  [title]
      */
     function info(message, data, title) {
       data = data || {};
@@ -85,9 +82,9 @@
      * @desc      Success method for logger factory.
      * @memberOf  Factories.Logger
      *
-     * @param {String}  message
-     * @param {Object}  [data]
-     * @param {String}  [title]
+     * @param {string}  message
+     * @param {object}  [data]
+     * @param {string}  [title]
      */
     function success(message, data, title) {
       data = data || {};
@@ -103,9 +100,9 @@
      * @desc      Warning method for logger factory.
      * @memberOf  Factories.Logger
      *
-     * @param {String}  message
-     * @param {Object}  [data]
-     * @param {String}  [title]
+     * @param {string}  message
+     * @param {object}  [data]
+     * @param {string}  [title]
      */
     function warning(message, data, title) {
       data = data || {};

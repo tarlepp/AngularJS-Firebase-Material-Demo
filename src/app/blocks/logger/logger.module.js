@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Module initialization
+   * Initialization of blocks.logger module.
    *
    * @namespace Modules
    */

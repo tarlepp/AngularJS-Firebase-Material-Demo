@@ -34,8 +34,8 @@
      * @desc      Catcher method for exception factory.
      * @memberOf  Factories.Exception
      *
-     * @param   {String}  message
-     * @returns {Function}
+     * @param   {string}  message
+     * @returns {function}
      */
     function catcher(message) {
       return function(reason) {

@@ -4,14 +4,14 @@
   'use strict';
 
   /**
-   * Specify provider and configure it for module
+   * Specify provider and configure it for blocks.exception module
    *
    * @namespace Providers
    */
   angular
     .module('blocks.exception')
     .provider('exceptionHandler', exceptionHandlerProvider)
-    .config(configure)
+    .config(moduleConfig)
   ;
 
   /**
@@ -25,11 +25,11 @@
       appErrorPrefix: undefined
     };
 
-    this.configure = function(appErrorPrefix) {
+    this.configure = function configure(appErrorPrefix) {
       this.config.appErrorPrefix = appErrorPrefix;
     };
 
-    this.$get = function() {
+    this.$get = function $get() {
       return {config: this.config};
     };
   }
@@ -37,13 +37,13 @@
   /**
    * @desc      Configure by setting an optional string value for appErrorPrefix. Accessible via config.appErrorPrefix
    *            (via config value).
-   * @namespace ExceptionHandlerConfig
+   * @namespace ExceptionHandler
    * @memberOf  Providers
    * @ngInject
    *
    * @param  {$provide} $provide
    */
-  function configure($provide) {
+  function moduleConfig($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
   }
 
@@ -56,7 +56,7 @@
    * @param  {$delegate|*}                $delegate
    * @param  {Providers.ExceptionHandler} exceptionHandler
    * @param  {Factories.Logger}           logger
-   * @return {Function}                   the decorated $exceptionHandler service
+   * @return {function}                   the decorated $exceptionHandler service
    */
   function extendExceptionHandler($delegate, exceptionHandler, logger) {
     return function(exception, cause) {

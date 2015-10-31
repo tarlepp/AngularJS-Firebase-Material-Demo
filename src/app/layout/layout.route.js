@@ -2,25 +2,24 @@
   'use strict';
 
   /**
-   * Specify run block for module
+   * Specify run block for firebaseDemo.layout module.
    *
    * @namespace Routes
    */
   angular
     .module('firebaseDemo.layout')
-    .run(appRun)
+    .run(moduleRun)
   ;
 
   /**
-   * @desc      Actual run block.
+   * @desc      Run block for firebaseDemo.layout module.
    * @namespace Layout
    * @memberOf  Routes
    * @ngInject
    *
    * @param {Providers.RouterHelper}  routerHelper
-   * @constructor
    */
-  function appRun(routerHelper) {
+  function moduleRun(routerHelper) {
     routerHelper.configureStates(getStates());
   }
 

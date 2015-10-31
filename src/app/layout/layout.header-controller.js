@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Specify controller for module
+   * Specify controller for firebaseDemo.layout module.
    *
    * @namespace Controllers
    */
@@ -10,7 +10,6 @@
     .module('firebaseDemo.layout')
     .controller('HeaderController', HeaderController)
   ;
-
 
   /**
    * @desc      Controller implementation.
@@ -38,7 +37,7 @@
      * @param   {string}  provider
      * @returns {string}
      */
-    vm.getProviderClass = function(provider) {
+    vm.getProviderClass = function getProviderClass(provider) {
       var output = '';
 
       switch (provider) {
@@ -64,7 +63,7 @@
      *
      * @param {Event} $event
      */
-    vm.logout = function($event) {
+    vm.logout = function logout($event) {
       $event.preventDefault();
       $event.stopPropagation();
 
@@ -74,7 +73,7 @@
     };
 
     // Watcher for auth status
-    Auth.$onAuth(function(user) {
+    Auth.$onAuth(function onAuth(user) {
       vm.user = user;
     });
   }

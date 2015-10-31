@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Module initialization
+   * Initialization of firebaseDemo.chat module.
    *
    * @namespace Modules
    */
