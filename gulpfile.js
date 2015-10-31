@@ -161,9 +161,7 @@ gulp.task('dist', ['vendors', 'assets', 'fonts', 'styles-dist', 'scripts-dist'],
 gulp.task('statics', g.serve({
   port: 3002,
   root: ['./.tmp', './src/app', './bower_components'],
-  middleware: function(req, res, next) {
-    return historyApiFallback(req, res, next);
-  }
+  middleware: historyApiFallback({})
 }));
 
 /**
@@ -172,9 +170,7 @@ gulp.task('statics', g.serve({
 gulp.task('production', g.serve({
   port: 3000,
   root: ['./dist'],
-  middleware: function(req, res, next) {
-    return historyApiFallback(req, res, next);
-  }
+  middleware: historyApiFallback({})
 }));
 
 /**
@@ -186,7 +182,7 @@ gulp.task('watch', ['statics', 'default'], function() {
   isWatching = true;
 
   // Initiate livereload server:
-  g.livereload();
+  g.livereload({start: true});
 
   gulp.watch('./src/app/**/*.js', ['jshint']).on('change', function(evt) {
     if (evt.type !== 'changed') {
