@@ -1,4 +1,4 @@
-Angular/Firebase/Material - demo
+AngularJS/Firebase/Material - demo
 ============
 [![Dependency Status](https://david-dm.org/tarlepp/Angular-Firebase-Material-Demo.svg)](https://david-dm.org/tarlepp/Angular-Firebase-Material-Demo)
 [![devDependency Status](https://david-dm.org/tarlepp/Angular-Firebase-Material-Demo/dev-status.svg)](https://david-dm.org/tarlepp/Angular-Firebase-Material-Demo#info=devDependencies)
